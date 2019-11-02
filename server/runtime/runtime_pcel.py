@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
+import json
 path = "https://pcel.com/gamers?sucursal=0&limit=100"
 
 page_response = requests.get(path, timeout=5)
@@ -45,7 +46,7 @@ for row in rows:
     products.append({"name":name,"price":prices,"content":"","model":model,"marca":brand,"categoria":category,"imageDefault":""})
 
 f = open("results.json","w+")
-f.write(str({"data":products}).replace('',""))
+f.write(json.dumps({"data":products}).replace('',""))
 f.close()
 
 #df = pd.DataFrame({'Price':prices}) 
