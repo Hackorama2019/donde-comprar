@@ -16,11 +16,6 @@ category=[]
 imageDefault = []
 soup = BeautifulSoup(page_response.content,features="html.parser")
 initial = soup.find_all("div",class_="box-product product-list list-layout")[0]
-f = open("index.html","w+")
-f.write(str(initial))
-f.close()
-#tempImage = initial[0].find_all("img")
-#name = initial[0].find_all("div","name")
 for item in initial.children:
     if(item != '\n'):
         tempImage = item.find_all("img")
