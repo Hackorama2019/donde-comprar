@@ -1,0 +1,15 @@
+{
+    "name":"",
+    "price":[}       original:0,
+        "discount":'0 || undefined',
+        "url":"",
+        "site":""
+    }],
+    "content":"caracteristicas" || "descripcion",
+    "model":"",
+    "marca":"",
+    "categoria":"",
+     "imageDefault":""
+}
+
+
