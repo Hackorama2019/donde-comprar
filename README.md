@@ -121,4 +121,3 @@ Este proyecto está bajo la Licencia (Apache License) - mira el archivo [LICENSE
 
 ---
 Hecho con ❤️ por CODE LOVERS [SorielV](https://github.com/SorielV) 🤓| [aherreDev](https://github.com/aherreDev) 😁| [cjdiaz18](https://github.com/cjdiaz18) 🙃
->>>>>>> 923e7bbe7b6ea7c2fbf2c7439e86403d8d6c14a6
