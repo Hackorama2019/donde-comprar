@@ -15,13 +15,13 @@ with open("./totalData.json", 'r') as json_file:
         futureDataFrame.append([])
         for value in row.values():
             futureDataFrame[-1].append(value)
-        
     scrappedData = pd.DataFrame(data=futureDataFrame,columns=columns)
     scrappedData.head(10)
-    scrappedData.to_csv("temp.csv")
+    #scrappedData.to_csv("temp.csv")
     print(scrappedData.head())
     pd.DataFrame()
-    scrappedData[scrappedData["content"] != ""].assign(content="NoData")
+    print(scrappedData[scrappedData["categoria"] != "NoData" ])
+    #scrappedData[scrappedData["content"] != ""].assign(content="NoData")
     # print(scrappedData[scrappedData["content"] != "NoData"])
     # print(scrappedData.head(20))
     '''
