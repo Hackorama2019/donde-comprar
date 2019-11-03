@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Hacktorama 2019
-## donde-comprar
-=======
 # Donde Comprar ®
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
@@ -65,6 +61,7 @@ npm lint
 ## Deployment 📦
 
 _El deploy se realizo con [Netlify](https://www.netlify.com/)_
+Version Dummy [Netlify](https://relaxed-sammet-9c2631.netlify.com/)
 
 ## Browser Support
 
