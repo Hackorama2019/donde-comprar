@@ -1,15 +1,18 @@
 <template>
-  <pre>{{ shop }}</pre>
+  <div class="container">
+    <pre>{{ category }}</pre>
+    <pre>{{ products }}</pre>
+  </div>
 </template>
 
 <page-query>
-query getSchopById($id: ID!) {
-  shop: shop (id: $id) {
+query getCategoryById($id: ID!) {
+  category: category (id: $id) {
     id
     slug
     name
   }
-  products: allProduct(filter: { shop: { eq: $id }}) {
+  products: allProduct(filter: { category: { eq: $id }}) {
     edges {
       node {
         id
@@ -17,7 +20,7 @@ query getSchopById($id: ID!) {
         name
         content
         model
-        image
+        images
         price {
           url
           price
@@ -39,7 +42,7 @@ query getSchopById($id: ID!) {
 
 <script>
 export default {
-  shop: {
+  computed: {
     category () {
       return this.$page.category
     },

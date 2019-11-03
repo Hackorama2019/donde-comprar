@@ -1,18 +1,15 @@
 <template>
-  <div class="container">
-    <pre>{{ category }}</pre>
-    <pre>{{ products }}</pre>
-  </div>
+  <pre>shop</pre>
 </template>
 
-<page-query>
-query getCategoryById($id: ID!) {
-  category: category (id: $id) {
+<!--page-query>
+query getSchopById($id: ID!) {
+  shop: shop (id: $id) {
     id
     slug
     name
   }
-  products: allProduct(filter: { category: { eq: $id }}) {
+  products: allProduct(filter: { shop: { eq: $id }}) {
     edges {
       node {
         id
@@ -42,7 +39,7 @@ query getCategoryById($id: ID!) {
 
 <script>
 export default {
-  computed: {
+  shop: {
     category () {
       return this.$page.category
     },
@@ -51,4 +48,4 @@ export default {
     }
   }
 }
-</script>
+</script-->

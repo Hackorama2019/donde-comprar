@@ -5,7 +5,8 @@ const { slugify } = require('./../utils')
 const CategorySchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    uppercase: true
   },
   slug: {
     type: String,

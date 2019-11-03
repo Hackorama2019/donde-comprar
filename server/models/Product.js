@@ -19,12 +19,12 @@ const ProductSchema = new Schema({
       price: Number,
       discountPrice: Number,
       url: String,
-      site: {
-        type: String,
-        require: false
-      }
+      origin: String
     }],
     required: true
+  },
+  shops: {
+    type: [String]
   },
   content: {
     type: String,
@@ -36,27 +36,30 @@ const ProductSchema = new Schema({
   },
   brand: {
     type: String,
-    require: false
+    require: false,
+    uppercase: true
   },
   category: {
     type: String,
-    require: false
+    require: false,
+    uppercase: true
   },
   images: [{
     type: String,
-    default: undefined
+    default: []
   }],
   updatedAt: {
     type: Date,
     default: null
   }
-  // External link (redirection)
 })
 
 ProductSchema.pre('save', function (next) {
   if (!this.isModified('title')) {
     return next()
-  }
+  } 
+  this.shops = this.price.map(({ origin }) => origin)
+
   this.slug = slugify(this.title)
   return next()
 })

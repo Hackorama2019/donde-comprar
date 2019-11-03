@@ -20,7 +20,7 @@ query getBrandById($id: ID!) {
         name
         content
         model
-        image
+        images
         price {
           url
           price

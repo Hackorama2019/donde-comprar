@@ -1,9 +1,11 @@
-const Product = require('./Product')
 const Brand = require('./Brand')
 const Category = require('./Category')
+const Product = require('./Product')
+const Shop = require('./Shop')
 
 module.exports = {
-  Product,
   Brand,
-  Category
+  Category,
+  Product,
+  Shop
 }

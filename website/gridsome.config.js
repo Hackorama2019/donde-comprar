@@ -25,6 +25,12 @@ module.exports = {
         path: '/product/:id',
         component: './src/templates/Product.vue'
       }
+    ],
+    Shop: [
+      {
+        path: '/shop/:id',
+        component: './src/templates/Shop.vue'
+      }
     ]
   }
 }
