@@ -34,11 +34,11 @@ for item in items[0].find_all("div",class_ = "row"):
             priceNew = priceNew[0].text.replace("$","")
         else:
             priceNew = "NoData"
-        prices = {"original":priceOld,"discount":priceNew,"url":imageUrl,"site":preLink}
+        prices = {"original":priceOld,"discount":priceNew,"url":imageUrl,"site":preLink,"origin":"ddtech"}
         brand = "NoData"
         category = "NoData"
         model="NoData"
         products.append({"name":name,"price":prices,"content":content,"model":model,"marca":brand,"categoria":category,"imageDefault":""})
-f = open("results.json","w+")
+f = open("resultsDdtech.json","w+")
 f.write(json.dumps({"data":products}))
 f.close()

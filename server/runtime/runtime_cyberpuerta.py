@@ -25,7 +25,7 @@ for items in soup.select('li[class*="productData"]'):
     parseint = styleBackgroud[0].get("data-cp-prod-slider").split(",")
     styleBackgroud = parseint[0].replace('\/','/').replace('[\"',"").replace('\"','').replace("]","")
     print(parseint)
-    prices = {"site":path,"url":styleBackgroud,"discount":items.find_all("label",class_="price")[0].text.replace("$","").replace("\n",""),"original":items.find_all("span",class_="oldPrice")[0].find("del").text.replace("$","")}
+    prices = {"site":path,"url":styleBackgroud,"discount":items.find_all("label",class_="price")[0].text.replace("$","").replace("\n",""),"original":items.find_all("span",class_="oldPrice")[0].find("del").text.replace("$",""),"origin":"cyberpuerta"}
     page_response = requests.get(name[0].get("href"), timeout=5)
     soup2 = BeautifulSoup(page_response.content,features="html.parser")
     name = name[0].get("title")
@@ -38,7 +38,7 @@ for items in soup.select('li[class*="productData"]'):
     imageDefault = ""
     products.append({"name":name,"price":prices,"content":content,"model":model,"marca":brand,"categoria":category,"imageDefault":""})
 
-f = open("results.json","w+")
+f = open("resultsCyberpuerta.json","w+")
 f.write(json.dumps({"data":products}))
 f.close()
 

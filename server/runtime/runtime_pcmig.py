@@ -36,12 +36,12 @@ for article in productsItems[0].select('div[class*="item-col col-12"]'):
     print(pricesContainerNew)
     print(pricesContainerOld)
     print("______________________________")
-    prices = {"original":pricesContainerOld.split("$")[1],"discount":pricesContainerNew.split("$")[1],"url":tempImage[0].get("src"),"site":path}
+    prices = {"original":pricesContainerOld.split("$")[1],"discount":pricesContainerNew.split("$")[1],"url":tempImage[0].get("src"),"site":path,"origin":"pcmig"}
     brand = "NoData"
     content = "NoData"
     model="NoData"
     products.append({"name":name,"price":prices,"content":content,"model":model,"marca":brand,"categoria":category,"imageDefault":""})
 print({"data":products})
-f = open("results.json","w+")
+f = open("resultsPcmig.json","w+")
 f.write(json.dumps({"data":products}))
 f.close()

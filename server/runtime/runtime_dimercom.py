@@ -22,7 +22,7 @@ for item in initial.children:
         name = item.find_all("div","name")
         redirectUrl =  name[0].find("a").get("href")
         tempPrice = item.find_all("div",class_="special-price")
-        prices={"discount":tempPrice[0].find("span",class_="price-fixed").text.replace("$",""),"original":tempPrice[0].find("span",class_="price-old").text.replace("$",""),"url":tempImage[0].get("src"),"site":redirectUrl}
+        prices={"discount":tempPrice[0].find("span",class_="price-fixed").text.replace("$",""),"original":tempPrice[0].find("span",class_="price-old").text.replace("$",""),"url":tempImage[0].get("src"),"site":redirectUrl,"origin":"dimercom"}
         page_response = requests.get(redirectUrl,timeout=5)
         soup2 = BeautifulSoup(page_response.content,features="html.parser")
         model = soup2.find_all("div",class_="description")[0].text
@@ -32,6 +32,6 @@ for item in initial.children:
         imageDefault = ""
         products.append({"name":name[0].text,"price":prices,"content":"","model":model,"marca":brand,"categoria":category,"imageDefault":""})
 print(products)
-f = open("results.json","w+")
+f = open("resultsDimercom.json","w+")
 f.write(json.dumps({"data":products}))
 f.close()
