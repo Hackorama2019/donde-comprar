@@ -3,7 +3,8 @@
     "price":[}       original:0,
         "discount":'0 || undefined',
         "url":"",
-        "site":""
+        "site":"",
+        "origin":""
     }],
     "content":"caracteristicas" || "descripcion",
     "model":"",
