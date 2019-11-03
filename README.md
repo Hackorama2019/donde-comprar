@@ -62,6 +62,7 @@ npm lint
 
 _El deploy se realizo con [Netlify](https://www.netlify.com/)_
 Version Dummy [Netlify](https://relaxed-sammet-9c2631.netlify.com/)
+y para utilizar completamente nuestra data tenemos el demo en [Algolia](https://www.algolia.com/realtime-search-demo/ejemplo-2c9e9c9d-3bb0-4260-ac73-4e7df9c48ddb) INGRESE EL USUARIO *aherrerara11* y deje la contraseña en blanco
 
 ## Browser Support
 
