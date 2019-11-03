@@ -1,6 +1,10 @@
 const isNullOrUndefined = _ => _ === undefined || _ === null
 
 const slugify = originalText => {
+  if (!originalText) {
+    return ''
+  }
+
   const from = 'ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;'
   const to = 'aaaaaeeeeeiiiiooooouuuunc------'
 
@@ -14,11 +18,12 @@ const slugify = originalText => {
   }
 
   /* eslint-disabled escape-character */
-  return text
-    .replace(/s+/g, '-')
-    .replace(/&/g, '-y-')
-    .replace(/[^\w-]+/g, '')
-    .replace(/--+/g, '-')
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '')
 }
 
 const getPage = (page, defaultPage) => {
