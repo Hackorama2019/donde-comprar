@@ -16,3 +16,9 @@ const defaultPagination = {
 
 module.exports = router
   .get('/', queryOptions(defaultPagination), errorHandle(Controller.getProducts))
+  .post('/submit/json',(req,res)=>{
+
+  })
+  .get("/home",(req,res) =>{
+    res.send("<h1>Homa</h1>")
+  })
