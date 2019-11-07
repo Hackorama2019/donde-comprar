@@ -4,6 +4,14 @@ const brands = require('./data/brands.json')
 const shops = require('./data/shops.json')
 
 module.exports = function (api) {
+  api.chainWebpack(config => {
+    config.module
+      .rule('pug')
+      .test(/\.pug$/)
+      .use('pug-plain-loader')
+      .loader('pug-plain-loader')
+  })
+
   api.loadSource(({ store, addCollection }) => {
     const shopsCollection = addCollection({
       typeName: 'Shop'

@@ -231,6 +231,10 @@
 	.forgot_link.float-right {
 		float: none !important;
 	}
+	.header_bg_2 .filter_form.header_filter .form_group input.fi_width_1,
+	.filter_form.header_filter .form_group input.fi_width_1 {
+		min-width: 450px;
+	}
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -612,5 +616,8 @@
 		justify-content: center;
 		align-items: center;
 		padding: 20px;
+	}
+	.filter_form.header_filter form {
+		min-width: 450px;
 	}
 }

@@ -11,7 +11,9 @@ const CategorySchema = new Schema({
   slug: {
     type: String,
     required: false,
-    default: name => slugify(name)
+    default() {
+      return slugify(this.name)
+    }
   },
   refersTo: {
     type: Schema.ObjectId,

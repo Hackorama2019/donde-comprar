@@ -1,18 +1,62 @@
-<template>
-  <div class="container">
-    <pre>{{ category }}</pre>
-    <pre>{{ products }}</pre>
-  </div>
+<template lang="pug">
+  Layout
+    Breadcrumb(:title="category.name")
+    // - Start dondecomprar_listing_list section
+    section.dondecomprar_listing_list.dondecomprar_listing_list_2.section_padding.wow.fadeInUp
+      .container
+        .row
+          .col-lg-4
+            // - Start Sidebar Izquierda
+            .dondecomprar_sidebar.listing_page_sidebar
+              // - Start Categorias
+              // - End Categorias
+              // - Start Marcas
+              BrandList(:brands='brands')
+              // - End Marcas
+              // - Start Ratings Recientes
+              // -.widget_box.news_box
+                .wb_title
+                  h5 Listado Reciente
+                .wb_news_list
+                  .single_wb_news
+                    .news_thumb
+                      img(src='/assets/images/thumb_1.jpg', alt='')
+                    .news_info
+                      h2
+                        a(href='#') Computadora ASUS 2019 ultima generación i9 core
+                      p 23 May 2019
+                  .single_wb_news
+                    .news_thumb
+                      img(src='/assets/images/thumb_1.jpg', alt='')
+                    .news_info
+                      h2
+                        a(href='#') Computadora ASUS 2019 ultima generación i9 core.
+                      p 23 May 2019
+                  .single_wb_news
+                    .news_thumb
+                      img(src='/assets/images/thumb_1.jpg', alt='')
+                    .news_info
+                      h2
+                        a(href='#') Computadora ASUS 2019 ultima generación i9 core.
+                      p 23 May 2019
+              // - End Ratings Recientes
+              // - End Sidebar Izquierda
+          .col-lg-8
+            // - Start Listado de Productos
+            .dondecomprar_listing_main
+              template(v-for='(product, key) in products')
+                Product(:key='key', :product='product')
+            // - End Listado de Productos
 </template>
 
 <page-query>
-query getCategoryById($id: ID!) {
+query categoryTemplate($id: ID!) {
   category: category (id: $id) {
     id
     slug
     name
   }
-  products: allProduct(filter: { category: { eq: $id }}) {
+  allProduct (filter: { category: { eq: $id }}) {
     edges {
       node {
         id
@@ -26,10 +70,6 @@ query getCategoryById($id: ID!) {
           price
           discountPrice
         }
-        category {
-          name
-          path
-        }
         brand {
           name
           path
@@ -37,18 +77,97 @@ query getCategoryById($id: ID!) {
       }
     }
   }
+  allBrand {
+    edges {
+      node {
+        id
+        slug
+        name
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
+import Product from '~/components/Product'
+import CategoryList from '~/components/CategoryList'
+import BrandList from '~/components/BrandList'
+import Breadcrumb from '~/components/Breadcrumb'
+
 export default {
+  components: {
+    CategoryList,
+    BrandList,
+    Breadcrumb,
+    Product
+  },
   computed: {
     category () {
       return this.$page.category
     },
     products () {
-      return this.$page.products.edges.map(({ node }) => node)
+      return this.$page.allProduct.edges.map(({ node }) => {
+        node.price.sort((a, b) => a.discountPrice - b.discountPrice)
+        return node
+      })
+    },
+    brands () {
+      return this.$page.allBrand.edges.map(({ node }) => node)
     }
+  },
+  methods: {
+    getBestPrice ({ price: [{ discountPrice, price }] }) {
+      return { price, discountPrice }
+    }
+  },
+  mounted () {
+    console.log(this.products)
   }
 }
 </script>
+
+<style lang="css" scoped>
+.card-product:after {
+  content: '';
+  display: table;
+  clear: both;
+  visibility: hidden;
+}
+.card-product .price-new,
+.card-product .price {
+  margin-right: 5px;
+}
+.card-product .price-old {
+  color: #999;
+}
+.card-product .img-wrap {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  position: relative;
+  height: 220px;
+  text-align: center;
+}
+.card-product .img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-product .info-wrap {
+  overflow: hidden;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+.card-product .action-wrap {
+  padding-top: 4px;
+  margin-top: 4px;
+}
+.card-product .bottom-wrap {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+.card-product .title {
+  margin-top: 0;
+}
+</style>

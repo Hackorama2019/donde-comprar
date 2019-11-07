@@ -14,7 +14,7 @@
             <div class="post_info">
                 <h3><a href="listing_details.html">{{ product.name }}</a></h3>
                 <h4 class="price">{{ product.price[0].price }}</h4>
-                <p class="location">{{ product.price[0].location }}</p>
+                <p class="location">{{ product.price[0].origin }}</p>
                 <ul class="st_rateing">
                     <li><i class="fas fa-star"></i><span>4.5</span></li>
                 </ul>

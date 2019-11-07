@@ -14,15 +14,12 @@ const ProductSchema = new Schema({
       return slugify(this.name)
     }
   },
-  price: {
-    type: [{
-      price: Number,
-      discountPrice: Number,
-      url: String,
-      origin: String
-    }],
-    required: true
-  },
+  price: [{
+    original: Number,
+    discount: Number,
+    url: String,
+    origin: String
+  }],
   shops: {
     type: [String]
   },

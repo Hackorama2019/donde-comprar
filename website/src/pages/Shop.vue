@@ -1,38 +1,39 @@
 <template lang="pug">
   Layout
-    Breadcrumb(title="Marcas")
+    Breadcrumb(title="Tiendas")
     section.section_padding.wow.fadeInUp
       .container
         .row
-          BrandList(:brands="brands")
+          ShopList(:shops="shops")
 </template>
 
-<static-query>
-query getAllBrands {
-  allBrand {
+<page-query>
+query getAllShops {
+  shops: allShop {
     edges {
       node {
         id
         slug
         name
+        image
       }
     }
   }
 }
-</static-query>
+</page-query>
 
 <script>
 import Breadcrumb from '~/components/Breadcrumb'
-import BrandList from '~/components/BrandList'
+import ShopList from '~/components/ShopList'
 
 export default {
   components: {
     Breadcrumb,
-    BrandList
+    ShopList
   },
   computed: {
-    brands () {
-      return this.$static.allBrand.edges.map(({ node }) => node)
+    shops () {
+      return this.$page.shops.edges.map(({ node }) => node)
     }
   }
 }

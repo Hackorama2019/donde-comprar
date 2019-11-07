@@ -9,7 +9,7 @@
             <div class="col-lg-3">
               <div class="dondecomprar_logo">
                 <a href="index.html">
-                  <img src="assets/images/logo.png" alt />
+                  <img src="/assets/images/logo.png" alt />
                 </a>
               </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="col-md-4 col-6">
               <div class="mobile_menu_logo">
                 <a href="index.html" class="logo">
-                  <img src="assets/images/logo.png" alt />
+                  <img src="/assets/images/logo.png" alt />
                 </a>
               </div>
             </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="brand_logo text-center">
               <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt />
+                <img src="/assets/images/logo.png" alt />
               </a>
             </div>
             <div class="sidebar_search">
@@ -86,7 +86,7 @@
     <!-- Start header_bg section -->
     <section
       class="header_bg header_bg_1 welcome_section bg_image"
-      style="background-image: url(assets/images/head_bg_1.jpg);"
+      style="background-image: url(/assets/images/head_bg_1.jpg);"
     >
       <div class="dondecomprar_overlay"></div>
       <div class="container">

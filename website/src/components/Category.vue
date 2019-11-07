@@ -1,17 +1,15 @@
-<template>
-  <div class="category_box category_box_1">
-    <a href="productos_listing.html" class="category_featured">
-      <div class="category_icon">
-        <i :class="[icon]"></i>
-      </div>
-      <div class="category_info">
-        <h5>{{ category }}</h5>
-      </div>
-    </a>
-  </div>
+<template lang="pug">
+  .category_box.category_box_1
+    a.category_featured(:href="'/category/' + slugify(category)")
+      .category_icon
+        i(:class='[icon]')
+      .category_info
+        h5 {{ category }}
 </template>
 
 <script>
+import { slugify } from '~/utils'
+
 export default {
   props: {
     icon: {
@@ -22,6 +20,9 @@ export default {
       type: String,
       required: true
     }
+  },
+  methods: {
+    slugify
   }
 }
 </script>

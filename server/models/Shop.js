@@ -11,7 +11,9 @@ const ShopSchema = new Schema({
   slug: {
     type: String,
     required: false,
-    default: name => slugify(name)
+    default() {
+      return slugify(this.name)
+    }
   },
   image: {
     type: String
