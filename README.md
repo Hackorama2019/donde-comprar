@@ -101,7 +101,7 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 
 * **Soriel Vallejo** - *Fullstack* - [SorielV](https://github.com/SorielV)
 * **Roman Herrera** - *Backend* - [aherreDev](https://github.com/aherreDev)
-* **Carlos Diaz** - *Frondend* - [cjdiaz18](https://github.com/cjdiaz18)
+* **Carlos Diaz** - *Frontend* - [cjdiaz18](https://github.com/cjdiaz18)
 
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/Hackorama2019/donde-comprar/graphs/contributors) quíenes han participado en este proyecto. 💪🏻
