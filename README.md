@@ -12,29 +12,16 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 Mira **Deployment** para conocer como desplegar el proyecto.
 
 
-### Pre-requisitos 📋
-
-_Esto es lo que necesitaras para instalar el repo y hacerlo jalar_
-
-```
-ejemplo
-```
-
 ### Instalación 🔧
 
 _Una serie de ejemplos paso a paso que te indica lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Paso 1_
+_Instalacion de Dependencias_
 
 ```
-npm Ejemplo paso 1
+npm install
 ```
 
-_Paso 2_
-
-```
-npm Ejemplo paso 2
-```
 
 _Y así se podrña obtener los datos del sistema para oder hacer uso de ellos_
 
@@ -101,7 +88,7 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 
 * **Soriel Vallejo** - *Fullstack* - [SorielV](https://github.com/SorielV)
 * **Roman Herrera** - *Backend* - [aherreDev](https://github.com/aherreDev)
-* **Carlos Diaz** - *Frontend* - [cjdiaz18](https://github.com/cjdiaz18)
+* **Carlos Diaz** - *Frontend* - [cjdiaz](https://github.com/cjdiaz)
 
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/Hackorama2019/donde-comprar/graphs/contributors) quíenes han participado en este proyecto. 💪🏻
@@ -121,4 +108,4 @@ Este proyecto está bajo la Licencia (Apache License) - mira el archivo [LICENSE
 #### Hackorama 2019
 
 ---
-Hecho con ❤️ por CODE LOVERS [SorielV](https://github.com/SorielV) 🤓| [aherreDev](https://github.com/aherreDev) 😁| [cjdiaz18](https://github.com/cjdiaz18) 🙃
+Hecho con ❤️  por CODE LOVERS [SorielV](https://github.com/SorielV) 🤓 | [aherreDev](https://github.com/aherreDev) 😁 | [cjdiaz18](https://github.com/cjdiaz) 🤓
