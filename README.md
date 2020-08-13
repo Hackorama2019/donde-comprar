@@ -3,52 +3,31 @@
 
 ![Product Presentation Image](/img_readme.jpg)
 
-_**Donde Comprar®** Es un motor de busqueda para usuarios que busquen algun componente de computadora de una forma facil y rapida._
+_**Donde Comprar®** Es un motor de busqueda para usuarios que busquen algún componente de computadora de una forma facil, rapida y sencilla._
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas. Sientete libre de modificar y crear mejoras a este proyecto que lo hacemos todos._
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas. Sientete libre de modificar y crear mejoras a este proyecto que lo hacemos todos._ 😉
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
-
-### Pre-requisitos 📋
-
-_Esto es lo que necesitaras para instalar el repo y hacerlo jalar_
-
-```
-ejemplo
-```
 
 ### Instalación 🔧
 
 _Una serie de ejemplos paso a paso que te indica lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Paso 1_
+_Instalacion de Dependencias_
 
 ```
-npm Ejemplo paso 1
+npm install
 ```
 
-_Paso 2_
-
-```
-npm Ejemplo paso 2
-```
-
-_Y así se podrña obtener los datos del sistema para oder hacer uso de ellos_
+_Y así se podrá obtener los datos del sistema para oder hacer uso de ellos_
 
 ## Ejecutando las pruebas ⚙️
 
 _Pruebas automatizadas para este sistema_
 
-### Analice las pruebas End-to-End 🔩
-
-_Verificación de puevas End-to-End_
-
-```
-Ejemplo
-```
 
 ### Pruebas de estilo de codificación ⌨️
 
@@ -66,13 +45,13 @@ y para utilizar completamente nuestra data tenemos el demo en [Algolia](https://
 
 ## Browser Support
 
-En la actualidad, nuestro objetivo oficial es soportar las últimas dos versiones de los siguientes navegadores:
+En la actualidad, nuestro objetivo principal es soportar las últimas dos versiones de los siguientes navegadores:
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
 ## Construido con 🛠️
 
-_Algunas de las herramientas y tecnologias usadas para este proyecto son:_
+_Algunas de las herramientas y tecnologías usadas para este proyecto son:_
 
 * [MongoDB](https://www.mongodb.com/es) - Es una base de datos distribuida, basada en documentos.
 * [NumPy](https://numpy.org/) - Es un paquete que provee a Python con arreglos multidimensionales de alta eficiencia y diseñados para cálculo científico.
@@ -85,7 +64,7 @@ Usamos otras herramientas como Gridsome, Algolia entre otras.
 
 ## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+Por favor lee el [CONTRIBUTING.md](https://github.com/Hackorama2019/donde-comprar/blob/master/CONTRIBUTING.md) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 ## Wiki 📖
 
@@ -97,11 +76,11 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+_Este gran proyecto fue creado por:_
 
 * **Soriel Vallejo** - *Fullstack* - [SorielV](https://github.com/SorielV)
 * **Roman Herrera** - *Backend* - [aherreDev](https://github.com/aherreDev)
-* **Carlos Diaz** - *Frontend* - [cjdiaz18](https://github.com/cjdiaz18)
+* **Carlos Diaz** - *Frontend* - [CardiaDev](https://github.com/cardiadev)
 
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/Hackorama2019/donde-comprar/graphs/contributors) quíenes han participado en este proyecto. 💪🏻
@@ -114,11 +93,11 @@ Este proyecto está bajo la Licencia (Apache License) - mira el archivo [LICENSE
 
 * **Michelada.io** por alentar este proyecto. 📢
 * O'Reilly - RedisLab - Nexmon - The Pragmatic Bookshelf 📢
-* A todos los que hicieron posible este producto. 🍺
-* Gracias a todos los que se toman el tiempo de revisar este proyecto. 🤓
-* Gracias a todos los contribuidores. ✌🏻
+* A todos los que ayudaron como mentores para hacer posible este producto. 🍺
+* Gracias, a todos los que se tomaron el tiempo de revisar este proyecto. 🤓
+* Gracias, a todos los contribuidores. ✌🏻
 
 #### Hackorama 2019
 
 ---
-Hecho con ❤️ por CODE LOVERS [SorielV](https://github.com/SorielV) 🤓| [aherreDev](https://github.com/aherreDev) 😁| [cjdiaz18](https://github.com/cjdiaz18) 🙃
+Hecho con ❤️  por CODE LOVERS [SorielV](https://github.com/SorielV) 🤓 | [aherreDev](https://github.com/aherreDev) 😁 | [CardiaDev](https://github.com/cardiadev) 🤓
